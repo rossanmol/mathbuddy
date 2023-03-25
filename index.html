@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math Buddy - Truly yours, forever.</title>
+  </head>
+  <body>
+    <input type="text" id="expression" oninput="evaluateExpression()" />
+    <p id="error-message" style="display: none; color: red">
+      Invalid Expression!
+    </p>
+    <button onclick="evaluateExpression(false)">Evaluate</button>
+    <p>Result: <span id="result"></span></p>
+    <script src="eval-expression.js"></script>
+    <script src="human-to-array.js"></script>
+    <script src="ui.js"></script>
+  </body>
+</html>
