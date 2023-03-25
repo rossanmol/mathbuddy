@@ -10,8 +10,7 @@ function evaluateExpression(isSilent = true) {
   );
 
   try {
-    console.log(operators, values);
-    if (operators.includes(values[values.length])) {
+    if (operators.includes(values[values.length - 1])) {
       throw new Error("Invalid expression");
     }
     // evalExpression will take the array of values and evaluate the expression
@@ -59,12 +58,9 @@ function addFunction(fnName) {
   const value = prompt(`Give me a number for ${fnName}`);
   const number = parseFloat(value);
 
-  console.log("wow number", number);
   if (isNaN(number)) {
     return;
   }
-
-  console.log(number, "number");
 
   addToScreen(`${fnName}(${number})`);
 }
