@@ -25,3 +25,12 @@ function evaluateExpression(isSilent = true) {
     errorMessage.style.display = "block";
   }
 }
+
+async function getRandomNumber() {
+  const x = await fetch(
+    "https://www.random.org/integers/?num=1&min=1&max=100&col=1&base=10&format=plain"
+  );
+
+  const text = await x.text();
+  document.getElementById("expression").value = text;
+}
