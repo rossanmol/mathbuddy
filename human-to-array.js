@@ -46,6 +46,5 @@ function extractValues(expression, sum = 0) {
   // I thought that's fine, however it is an improvement point
   const termRegex = /(\d+(\.\d+)?|[+\-*/()]|[a-z]+\([^)]+\))/gi;
   const terms = [...expression.matchAll(termRegex)].map((term) => term[0]);
-  console.log(terms);
   return parseTerms(terms, sum);
 }
