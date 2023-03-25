@@ -19,10 +19,9 @@ function evaluateExpression(isSilent = true) {
     if (!isSilent) {
       document.getElementById("result").innerText = answer;
     }
+    return answer;
   } catch (error) {
     // If evalExpression throws an error, we can show the error message
     errorMessage.style.display = "block";
   }
-
-  return result;
 }
