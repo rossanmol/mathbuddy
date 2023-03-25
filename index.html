@@ -4,18 +4,106 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Math Buddy - Truly yours, forever.</title>
+    <link href="./reset.css" rel="stylesheet" />
+    <link href="./home.css" rel="stylesheet" />
   </head>
   <body>
-    <input type="text" id="expression" oninput="evaluateExpression()" />
-    <p id="error-message" style="display: none; color: red">
-      Invalid Expression!
-    </p>
-    <button onclick="evaluateExpression(false)">Evaluate</button>
+    <div class="calculator">
+      <div class="calculator-screen">
+        <p id="calculator-error" style="display: none; color: red">
+          Invalid Expression!
+        </p>
+        <input
+          type="text"
+          id="result"
+          oninput="evaluateExpression()"
+          value="0"
+        />
+      </div>
 
-    <button onClick="getRandomNumber()">RAND</button>
-    <p>Result: <span id="result"></span></p>
-    <script src="eval-expression.js"></script>
-    <script src="human-to-array.js"></script>
-    <script src="ui.js"></script>
+      <div class="calculator-keys">
+        <button
+          type="button"
+          onClick="addFunction(this.innerText)"
+          class="button-orange"
+        >
+          sin
+        </button>
+        <button
+          type="button"
+          onClick="addFunction(this.innerText)"
+          class="button-orange"
+        >
+          cos
+        </button>
+        <button
+          type="button"
+          onClick="addFunction(this.innerText)"
+          class="button-orange"
+        >
+          tan
+        </button>
+        <button type="button" onClick="clearScreen()" class="button-ac">
+          AC
+        </button>
+        <button type="button" onClick="addToScreen(this.innerText)">7</button>
+        <button type="button" onClick="addToScreen(this.innerText)">8</button>
+        <button type="button" onClick="addToScreen(this.innerText)">9</button>
+        <button
+          type="button"
+          onClick="addToScreen(this.innerText)"
+          class="button-special"
+        >
+          /
+        </button>
+
+        <button type="button" onClick="addToScreen(this.innerText)">4</button>
+        <button type="button" onClick="addToScreen(this.innerText)">5</button>
+        <button type="button" onClick="addToScreen(this.innerText)">6</button>
+        <button
+          type="button"
+          onClick="addToScreen(this.innerText)"
+          class="button-special"
+        >
+          *
+        </button>
+
+        <button type="button" onClick="addToScreen(this.innerText)">1</button>
+        <button type="button" onClick="addToScreen(this.innerText)">2</button>
+        <button type="button" onClick="addToScreen(this.innerText)">3</button>
+        <button
+          type="button"
+          onClick="addToScreen(this.innerText)"
+          class="button-special"
+        >
+          +
+        </button>
+
+        <button type="button" onClick="addToScreen(this.innerText)">0</button>
+        <button
+          type="button"
+          value="RAND"
+          class="button-orange"
+          onclick="generateRandomNumber()"
+        >
+          RAND
+        </button>
+        <button class="button-equal" onclick="evaluateExpression(false)">
+          =
+        </button>
+        <button
+          type="button"
+          value="+"
+          onClick="addToScreen(this.innerText)"
+          class="button-special"
+        >
+          -
+        </button>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="eval-expression.js"></script>
+    <script type="text/javascript" src="human-to-array.js"></script>
+    <script type="text/javascript" src="ui.js"></script>
   </body>
 </html>
