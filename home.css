@@ -2,6 +2,8 @@ body {
   background-color: #e5e5e5;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .calculator {
@@ -11,6 +13,11 @@ body {
   padding: 20px;
   box-sizing: border-box;
   border-radius: 20px;
+}
+
+.calculator-container {
+  justify-content: center;
+  display: flex;
 }
 
 .calculator-screen {
@@ -77,4 +84,19 @@ input {
   aspect-ratio: 2 / 1;
   grid-column: span 2;
   border-radius: 150px;
+}
+
+#history {
+  display: flex;
+  padding: 20px;
+  background: #edeaea;
+  border-radius: 4px;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#history div {
+  background-color: #dddddd;
+  padding: 4px 12px;
+  border-radius: 4px;
 }

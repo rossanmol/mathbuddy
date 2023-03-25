@@ -24,3 +24,13 @@ Project available via: https://mathbuddy-pied.vercel.app/
 
 This application, is a static implementation and does not require a server to run.
 To run the application just open `index.html` file, or navigate to https://mathbuddy-pied.vercel.app/
+
+- Input a mathematical expression using the on-screen buttons or your keyboard.
+- The expression will be validated on every keypress.
+- If the expression is valid, the result will be displayed immediately.
+- If the expression is invalid, an error message will be shown.
+- The last 5 expressions and their results will be displayed in history.
+
+### Assumptions
+
+Please refer to the ASSUMPTIONS.md file for a list of assumptions made during the implementation of this project.

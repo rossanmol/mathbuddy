@@ -20,11 +20,24 @@ function evaluateExpression(isSilent = true) {
     errorMessage.style.display = "none";
     if (!isSilent) {
       document.getElementById("result").value = answer;
+      appendToHistory(`${lastText} = ${answer}`);
     }
     return answer;
   } catch (error) {
     // If evalExpression throws an error, we can show the error message
     errorMessage.style.display = "block";
+  }
+}
+
+function appendToHistory(text) {
+  const historyEl = document.getElementById("history");
+  const item = document.createElement("div");
+  item.textContent = text;
+  historyEl.prepend(item);
+
+  // Keep only the last 5 items
+  while (historyEl.childElementCount > 5) {
+    historyEl.removeChild(historyEl.lastElementChild);
   }
 }
 

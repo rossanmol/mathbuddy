@@ -8,99 +8,103 @@
     <link href="./home.css" rel="stylesheet" />
   </head>
   <body>
-    <div class="calculator">
-      <div class="calculator-screen">
-        <p id="calculator-error" style="display: none; color: red">
-          Invalid Expression!
-        </p>
-        <input
-          type="text"
-          id="result"
-          oninput="evaluateExpression()"
-          value="0"
-        />
-      </div>
+    <div class="calculator-container">
+      <div class="calculator">
+        <div class="calculator-screen">
+          <p id="calculator-error" style="display: none; color: red">
+            Invalid Expression!
+          </p>
+          <input
+            type="text"
+            id="result"
+            oninput="evaluateExpression()"
+            value="0"
+          />
+        </div>
 
-      <div class="calculator-keys">
-        <button
-          type="button"
-          onClick="addFunction(this.innerText)"
-          class="button-orange"
-        >
-          sin
-        </button>
-        <button
-          type="button"
-          onClick="addFunction(this.innerText)"
-          class="button-orange"
-        >
-          cos
-        </button>
-        <button
-          type="button"
-          onClick="addFunction(this.innerText)"
-          class="button-orange"
-        >
-          tan
-        </button>
-        <button type="button" onClick="clearScreen()" class="button-ac">
-          AC
-        </button>
-        <button type="button" onClick="addToScreen(this.innerText)">7</button>
-        <button type="button" onClick="addToScreen(this.innerText)">8</button>
-        <button type="button" onClick="addToScreen(this.innerText)">9</button>
-        <button
-          type="button"
-          onClick="addToScreen(this.innerText)"
-          class="button-special"
-        >
-          /
-        </button>
+        <div class="calculator-keys">
+          <button
+            type="button"
+            onClick="addFunction(this.innerText)"
+            class="button-orange"
+          >
+            sin
+          </button>
+          <button
+            type="button"
+            onClick="addFunction(this.innerText)"
+            class="button-orange"
+          >
+            cos
+          </button>
+          <button
+            type="button"
+            onClick="addFunction(this.innerText)"
+            class="button-orange"
+          >
+            tan
+          </button>
+          <button type="button" onClick="clearScreen()" class="button-ac">
+            AC
+          </button>
+          <button type="button" onClick="addToScreen(this.innerText)">7</button>
+          <button type="button" onClick="addToScreen(this.innerText)">8</button>
+          <button type="button" onClick="addToScreen(this.innerText)">9</button>
+          <button
+            type="button"
+            onClick="addToScreen(this.innerText)"
+            class="button-special"
+          >
+            /
+          </button>
 
-        <button type="button" onClick="addToScreen(this.innerText)">4</button>
-        <button type="button" onClick="addToScreen(this.innerText)">5</button>
-        <button type="button" onClick="addToScreen(this.innerText)">6</button>
-        <button
-          type="button"
-          onClick="addToScreen(this.innerText)"
-          class="button-special"
-        >
-          *
-        </button>
+          <button type="button" onClick="addToScreen(this.innerText)">4</button>
+          <button type="button" onClick="addToScreen(this.innerText)">5</button>
+          <button type="button" onClick="addToScreen(this.innerText)">6</button>
+          <button
+            type="button"
+            onClick="addToScreen(this.innerText)"
+            class="button-special"
+          >
+            *
+          </button>
 
-        <button type="button" onClick="addToScreen(this.innerText)">1</button>
-        <button type="button" onClick="addToScreen(this.innerText)">2</button>
-        <button type="button" onClick="addToScreen(this.innerText)">3</button>
-        <button
-          type="button"
-          onClick="addToScreen(this.innerText)"
-          class="button-special"
-        >
-          +
-        </button>
+          <button type="button" onClick="addToScreen(this.innerText)">1</button>
+          <button type="button" onClick="addToScreen(this.innerText)">2</button>
+          <button type="button" onClick="addToScreen(this.innerText)">3</button>
+          <button
+            type="button"
+            onClick="addToScreen(this.innerText)"
+            class="button-special"
+          >
+            +
+          </button>
 
-        <button type="button" onClick="addToScreen(this.innerText)">0</button>
-        <button
-          type="button"
-          value="RAND"
-          class="button-orange"
-          onclick="generateRandomNumber()"
-        >
-          RAND
-        </button>
-        <button class="button-equal" onclick="evaluateExpression(false)">
-          =
-        </button>
-        <button
-          type="button"
-          value="+"
-          onClick="addToScreen(this.innerText)"
-          class="button-special"
-        >
-          -
-        </button>
+          <button type="button" onClick="addToScreen(this.innerText)">0</button>
+          <button
+            type="button"
+            value="RAND"
+            class="button-orange"
+            onclick="generateRandomNumber()"
+          >
+            RAND
+          </button>
+          <button class="button-equal" onclick="evaluateExpression(false)">
+            =
+          </button>
+          <button
+            type="button"
+            value="+"
+            onClick="addToScreen(this.innerText)"
+            class="button-special"
+          >
+            -
+          </button>
+        </div>
       </div>
     </div>
+
+    <div id="history"></div>
 
     <script type="text/javascript" src="eval-expression.js"></script>
     <script type="text/javascript" src="human-to-array.js"></script>
